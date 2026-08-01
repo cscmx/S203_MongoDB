@@ -1,229 +1,230 @@
 {
   "collections": {
-    "S203_OPTICA.clientes": {
-      "ns": "S203_OPTICA.clientes",
+    "Optica.clients": {
+      "ns": "Optica.clients",
       "jsonSchema": {
         "bsonType": "object",
         "required": [
           "_id",
-          "direccion",
+          "address",
+          "dateOfRegistry",
           "email",
-          "fechaRegistro",
-          "idClienteRecomendador",
-          "nombre",
-          "telefono"
+          "name",
+          "phone",
+          "referral"
         ],
         "properties": {
           "_id": {
             "bsonType": "objectId"
           },
-          "direccion": {
-            "bsonType": "string"
+          "address": {
+            "bsonType": "object",
+            "properties": {
+              "city": {
+                "bsonType": "string"
+              },
+              "country": {
+                "bsonType": "string"
+              },
+              "street": {
+                "bsonType": "string"
+              },
+              "zip-code": {
+                "bsonType": "string"
+              }
+            },
+            "required": [
+              "city",
+              "country",
+              "street",
+              "zip-code"
+            ],
+            "expanded": false
+          },
+          "dateOfRegistry": {
+            "bsonType": "date"
           },
           "email": {
             "bsonType": "string"
           },
-          "fechaRegistro": {
+          "name": {
             "bsonType": "string"
           },
-          "idClienteRecomendador": {
+          "phone": {
+            "bsonType": "string"
+          },
+          "referral": {
             "bsonType": [
               "null",
               "objectId"
             ]
-          },
-          "nombre": {
-            "bsonType": "string"
-          },
-          "telefono": {
-            "bsonType": "string"
           }
         }
       }
     },
-    "S203_OPTICA.empleados": {
-      "ns": "S203_OPTICA.empleados",
+    "Optica.glasses": {
+      "ns": "Optica.glasses",
       "jsonSchema": {
         "bsonType": "object",
         "required": [
           "_id",
-          "apellido",
-          "nombre",
-          "puesto"
+          "brand",
+          "frame",
+          "frame_color",
+          "glass_color",
+          "price",
+          "supplier"
         ],
         "properties": {
           "_id": {
             "bsonType": "objectId"
           },
-          "apellido": {
+          "brand": {
             "bsonType": "string"
           },
-          "nombre": {
+          "frame": {
             "bsonType": "string"
           },
-          "puesto": {
-            "bsonType": "string"
-          }
-        }
-      }
-    },
-    "S203_OPTICA.gafas": {
-      "ns": "S203_OPTICA.gafas",
-      "jsonSchema": {
-        "bsonType": "object",
-        "required": [
-          "_id",
-          "colorMontura",
-          "idProveedor",
-          "marca",
-          "precio",
-          "tipoMontura"
-        ],
-        "properties": {
-          "_id": {
-            "bsonType": "objectId"
-          },
-          "colorMontura": {
+          "frame_color": {
             "bsonType": "string"
           },
-          "idProveedor": {
-            "bsonType": "objectId"
-          },
-          "marca": {
+          "glass_color": {
             "bsonType": "string"
           },
-          "precio": {
+          "price": {
             "bsonType": "double"
           },
-          "tipoMontura": {
-            "bsonType": "string"
+          "supplier": {
+            "bsonType": "objectId"
           }
         }
       }
     },
-    "S203_OPTICA.pedidos": {
-      "ns": "S203_OPTICA.pedidos",
+    "Optica.order": {
+      "ns": "Optica.order",
       "jsonSchema": {
         "bsonType": "object",
         "required": [
           "_id",
-          "colorVidrio",
-          "fechaVenta",
-          "graduacion",
-          "idCliente",
-          "idEmpleado",
-          "idGafa"
+          "id_cliente",
+          "id_glasses",
+          "id_worker",
+          "prescription",
+          "Total_Price"
         ],
         "properties": {
           "_id": {
             "bsonType": "objectId"
           },
-          "colorVidrio": {
+          "id_cliente": {
+            "bsonType": "objectId"
+          },
+          "id_glasses": {
+            "bsonType": "objectId"
+          },
+          "id_worker": {
+            "bsonType": "objectId"
+          },
+          "prescription": {
             "bsonType": "object",
             "properties": {
-              "vidrioDerecho": {
-                "bsonType": "string"
-              },
-              "vidrioIzquierdo": {
-                "bsonType": "string"
-              }
-            },
-            "required": [
-              "vidrioDerecho",
-              "vidrioIzquierdo"
-            ]
-          },
-          "fechaVenta": {
-            "bsonType": "date"
-          },
-          "graduacion": {
-            "bsonType": "object",
-            "properties": {
-              "vidrioDerecho": {
+              "left_eye": {
                 "bsonType": "double"
               },
-              "vidrioIzquierdo": {
+              "right_eye": {
                 "bsonType": "double"
               }
             },
             "required": [
-              "vidrioDerecho",
-              "vidrioIzquierdo"
+              "left_eye",
+              "right_eye"
             ]
           },
-          "idCliente": {
-            "bsonType": "objectId"
-          },
-          "idEmpleado": {
-            "bsonType": "objectId"
-          },
-          "idGafa": {
-            "bsonType": "objectId"
+          "Total_Price": {
+            "bsonType": "int"
           }
         }
       }
     },
-    "S203_OPTICA.proveedores": {
-      "ns": "S203_OPTICA.proveedores",
+    "Optica.supplier": {
+      "ns": "Optica.supplier",
       "jsonSchema": {
         "bsonType": "object",
         "required": [
           "_id",
-          "direccion",
+          "address",
           "fax",
-          "nif",
-          "nombre",
-          "telefono"
+          "name",
+          "NIF",
+          "phone"
         ],
         "properties": {
           "_id": {
             "bsonType": "objectId"
           },
-          "direccion": {
+          "address": {
             "bsonType": "object",
             "properties": {
-              "calle": {
+              "city": {
                 "bsonType": "string"
               },
-              "ciudad": {
+              "country": {
                 "bsonType": "string"
               },
-              "codigoPostal": {
+              "door": {
                 "bsonType": "string"
               },
-              "numero": {
+              "floor": {
+                "bsonType": "int"
+              },
+              "number": {
+                "bsonType": "int"
+              },
+              "street": {
                 "bsonType": "string"
               },
-              "pais": {
-                "bsonType": "string"
-              },
-              "piso": {
-                "bsonType": "string"
-              },
-              "puerta": {
+              "zip-code": {
                 "bsonType": "string"
               }
             },
             "required": [
-              "calle",
-              "ciudad",
-              "codigoPostal",
-              "numero",
-              "pais",
-              "piso",
-              "puerta"
+              "city",
+              "country",
+              "door",
+              "floor",
+              "number",
+              "street",
+              "zip-code"
             ]
           },
           "fax": {
             "bsonType": "string"
           },
-          "nif": {
+          "name": {
             "bsonType": "string"
           },
-          "nombre": {
+          "NIF": {
             "bsonType": "string"
           },
-          "telefono": {
+          "phone": {
+            "bsonType": "string"
+          }
+        }
+      }
+    },
+    "Optica.worker": {
+      "ns": "Optica.worker",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "name"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "name": {
             "bsonType": "string"
           }
         }
@@ -232,17 +233,17 @@
   },
   "relationships": [
     {
-      "id": "24875e48-e429-43a5-9efe-f7180eb67279",
+      "id": "5fa915a8-1191-4baf-bbd9-7b1aa737a0ee",
       "relationship": [
         {
-          "ns": "S203_OPTICA.pedidos",
+          "ns": "Optica.order",
           "fields": [
-            "idCliente"
+            "id_cliente"
           ],
-          "cardinality": 1
+          "cardinality": null
         },
         {
-          "ns": "S203_OPTICA.clientes",
+          "ns": "Optica.clients",
           "fields": [
             "_id"
           ],
@@ -252,17 +253,17 @@
       "isInferred": true
     },
     {
-      "id": "282b8b71-80de-43f1-9fe5-05f825825318",
+      "id": "07730ab5-20fe-475c-81e3-8d71074fa395",
       "relationship": [
         {
-          "ns": "S203_OPTICA.pedidos",
+          "ns": "Optica.order",
           "fields": [
-            "idEmpleado"
+            "id_glasses"
           ],
-          "cardinality": 1
+          "cardinality": null
         },
         {
-          "ns": "S203_OPTICA.empleados",
+          "ns": "Optica.glasses",
           "fields": [
             "_id"
           ],
@@ -272,17 +273,17 @@
       "isInferred": true
     },
     {
-      "id": "6ee770a0-d859-4963-a125-5ec7d151e23c",
+      "id": "dda8e5fa-44b5-4105-a9e2-8566f8a71a07",
       "relationship": [
         {
-          "ns": "S203_OPTICA.pedidos",
+          "ns": "Optica.glasses",
           "fields": [
-            "idGafa"
+            "supplier"
           ],
-          "cardinality": 1
+          "cardinality": null
         },
         {
-          "ns": "S203_OPTICA.gafas",
+          "ns": "Optica.supplier",
           "fields": [
             "_id"
           ],
@@ -292,17 +293,17 @@
       "isInferred": true
     },
     {
-      "id": "723b6f18-2f1e-4a80-aa1d-e77e5d6b7057",
+      "id": "eb8ed445-5ba5-45c4-87d3-1e1e1392831b",
       "relationship": [
         {
-          "ns": "S203_OPTICA.gafas",
+          "ns": "Optica.order",
           "fields": [
-            "idProveedor"
+            "id_worker"
           ],
-          "cardinality": 1
+          "cardinality": null
         },
         {
-          "ns": "S203_OPTICA.proveedores",
+          "ns": "Optica.worker",
           "fields": [
             "_id"
           ],
@@ -312,17 +313,17 @@
       "isInferred": true
     },
     {
-      "id": "51a64768-f932-440d-ab1b-a1ddeb3733c2",
+      "id": "5d0c4657-a4c8-4a8c-9324-fc8287551d22",
       "relationship": [
         {
-          "ns": "S203_OPTICA.clientes",
-          "cardinality": 1,
+          "ns": "Optica.clients",
+          "cardinality": null,
           "fields": [
-            "idClienteRecomendador"
+            "referral"
           ]
         },
         {
-          "ns": "S203_OPTICA.clientes",
+          "ns": "Optica.clients",
           "cardinality": 1,
           "fields": [
             "_id"
