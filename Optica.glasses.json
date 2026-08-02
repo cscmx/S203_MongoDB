@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "6a6cb886d1a627133006d052"
+  },
+  "brand": "Oakley",
+  "frame": "pasta",
+  "frame_color": "blue",
+  "glass_color": {
+    "left_eye": "dark green",
+    "right_eye": "dark green"
+  },
+  "price": 120.5,
+  "supplier": {
+    "$oid": "6a6cd16fd1a627133006d05e"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6cd3ced1a627133006d064"
+  },
+  "brand": "Etnia",
+  "frame": "metalic",
+  "frame_color": "gold",
+  "glass_color": {
+    "left_eye": "gray",
+    "right_eye": "gray"
+  },
+  "price": 185.5,
+  "supplier": {
+    "$oid": "6a6cd1dfd1a627133006d05f"
+  }
+}]

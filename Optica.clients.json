@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "6a6cd4fad1a627133006d06c"
+  },
+  "name": "Pedro",
+  "address": {
+    "street": "XXX",
+    "zip-code": "xxx",
+    "city": "Xxxx",
+    "country": "XXX"
+  },
+  "phone": "933222222",
+  "email": "pedro@email.com",
+  "referral": null,
+  "dateOfRegistry": {
+    "$date": "2026-01-24T23:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6cd797d1a627133006d06d"
+  },
+  "name": "Anna",
+  "address": {
+    "street": "yyyyy",
+    "zip-code": "yyyyy",
+    "city": "yyyyy",
+    "country": "yyy"
+  },
+  "phone": "933111111",
+  "email": "anna@email.com",
+  "referral": {
+    "$oid": "6a6cd95fd1a627133006d06c"
+  },
+  "dateOfRegistry": {
+    "$date": "2026-03-02T23:00:00.000Z"
+  }
+}]
