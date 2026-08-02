@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6a6e5fedc4917a2162d6d3ef"
+  },
+  "brand": "Oakley",
+  "frame": "pasta",
+  "price": 120.5,
+  "supplier": {
+    "$oid": "6a6e5f91c4917a2162d6d3e0"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6e6002c4917a2162d6d3f3"
+  },
+  "brand": "Etnia",
+  "frame": "metalic",
+  "price": 185.5,
+  "supplier": {
+    "$oid": "6a6e5fa3c4917a2162d6d3e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f5b81994e45d947642f6f"
+  },
+  "brand": "Lafont",
+  "frame": "pasta",
+  "price": 255.45,
+  "supplier": {
+    "$oid": "6a6e5fbbc4917a2162d6d3e8"
+  }
+}]

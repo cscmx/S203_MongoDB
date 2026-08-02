@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "6a6e62efc4917a2162d6d3fe"
+  },
+  "name": "Pedro",
+  "address": {
+    "street": "XXX",
+    "zip-code": "xxx",
+    "city": "Xxxx",
+    "country": "XXX"
+  },
+  "phone": "933222222",
+  "email": "pedro@email.com",
+  "referral": null,
+  "dateOfRegistry": {
+    "$date": "2026-01-24T23:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6e6306c4917a2162d6d402"
+  },
+  "name": "Anna",
+  "address": {
+    "street": "yyyyy",
+    "zip-code": "yyyyy",
+    "city": "yyyyy",
+    "country": "yyy"
+  },
+  "phone": "933111111",
+  "email": "anna@email.com",
+  "referral": {
+    "$oid": "6a6e62efc4917a2162d6d3fe"
+  },
+  "dateOfRegistry": {
+    "$date": "2026-03-02T23:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a6f5a2f994e45d947642f61"
+  },
+  "name": "Joana",
+  "address": {
+    "street": "aaaa",
+    "zip-code": "aaaa",
+    "city": "aaaaaa",
+    "country": "aaaaa"
+  },
+  "phone": "933222222",
+  "email": "joana@email.com",
+  "referral": {
+    "$oid": "6a6e6306c4917a2162d6d402"
+  },
+  "dateOfRegistry": {
+    "$date": "2026-04-12T23:00:00.000Z"
+  }
+}]

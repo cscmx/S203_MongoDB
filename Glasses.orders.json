@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6a6e63d5c4917a2162d6d40c"
+  },
+  "id_cliente": {
+    "$oid": "6a6e62efc4917a2162d6d3fe"
+  },
+  "id_glasses": {
+    "$oid": "6a6e5fedc4917a2162d6d3ef"
+  },
+  "prescription": {
+    "right_eye": 2.5,
+    "left_eye": 2.75
+  },
+  "Total_Price": 500
+},
+{
+  "_id": {
+    "$oid": "6a6f5964994e45d947642f56"
+  },
+  "id_cliente": {
+    "$oid": "6a6e6306c4917a2162d6d402"
+  },
+  "id_glasses": {
+    "$oid": "6a6e6002c4917a2162d6d3f3"
+  },
+  "prescription": {
+    "right_eye": 1.5,
+    "left_eye": 1.75
+  },
+  "Total_Price": 250
+},
+{
+  "_id": {
+    "$oid": "6a6f59ee994e45d947642f5c"
+  },
+  "id_cliente": {
+    "$oid": "6a6f5a2f994e45d947642f61"
+  },
+  "id_glasses": {
+    "$oid": "6a6e6002c4917a2162d6d3f3"
+  },
+  "prescription": {
+    "right_eye": 3.5,
+    "left_eye": 3.5
+  },
+  "Total_Price": 450
+}]

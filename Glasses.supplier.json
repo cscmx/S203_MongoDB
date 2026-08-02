@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "6a6e5f91c4917a2162d6d3e0"
+  },
+  "name": "MiopiLab",
+  "address": {
+    "street": "yyy",
+    "number": 23,
+    "floor": 2,
+    "door": "C",
+    "city": "Barcelona",
+    "zip-code": "08010",
+    "country": "Spain"
+  },
+  "phone": "933010101",
+  "fax": "9330101011",
+  "NIF": "1234567B"
+},
+{
+  "_id": {
+    "$oid": "6a6e5fa3c4917a2162d6d3e4"
+  },
+  "name": "Digito Opticas",
+  "address": {
+    "street": "xxx",
+    "number": 13,
+    "floor": 1,
+    "door": "2",
+    "city": "Barcelona",
+    "zip-code": "08008",
+    "country": "Spain"
+  },
+  "phone": "933020202",
+  "fax": "9330202022",
+  "NIF": "1234567A"
+},
+{
+  "_id": {
+    "$oid": "6a6e5fbbc4917a2162d6d3e8"
+  },
+  "name": "Labilab",
+  "address": {
+    "street": "zzz",
+    "number": 45,
+    "floor": 8,
+    "door": "3",
+    "city": "Barcelona",
+    "zip-code": "08011",
+    "country": "Spain"
+  },
+  "phone": "933030303",
+  "fax": "933030333",
+  "NIF": "87654321C"
+}]

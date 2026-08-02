@@ -1,0 +1,351 @@
+{
+  "collections": {
+    "Glasses.clients": {
+      "ns": "Glasses.clients",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "address",
+          "dateOfRegistry",
+          "email",
+          "name",
+          "phone",
+          "referral"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "address": {
+            "bsonType": "object",
+            "properties": {
+              "city": {
+                "bsonType": "string"
+              },
+              "country": {
+                "bsonType": "string"
+              },
+              "street": {
+                "bsonType": "string"
+              },
+              "zip-code": {
+                "bsonType": "string"
+              }
+            },
+            "required": [
+              "city",
+              "country",
+              "street",
+              "zip-code"
+            ]
+          },
+          "dateOfRegistry": {
+            "bsonType": "date"
+          },
+          "email": {
+            "bsonType": "string"
+          },
+          "name": {
+            "bsonType": "string"
+          },
+          "phone": {
+            "bsonType": "string"
+          },
+          "referral": {
+            "bsonType": [
+              "objectId",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "Glasses.glasses": {
+      "ns": "Glasses.glasses",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "brand",
+          "frame",
+          "frame_color",
+          "glass_color",
+          "price",
+          "supplier"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "brand": {
+            "bsonType": "string"
+          },
+          "frame": {
+            "bsonType": "string"
+          },
+          "frame_color": {
+            "bsonType": "string"
+          },
+          "glass_color": {
+            "bsonType": "object",
+            "properties": {
+              "left_eye": {
+                "bsonType": "string"
+              },
+              "right_eye": {
+                "bsonType": "string"
+              }
+            },
+            "required": [
+              "left_eye",
+              "right_eye"
+            ]
+          },
+          "price": {
+            "bsonType": "double"
+          },
+          "supplier": {
+            "bsonType": "objectId"
+          }
+        }
+      }
+    },
+    "Glasses.orders": {
+      "ns": "Glasses.orders",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "datetime",
+          "id_cliente",
+          "id_glasses",
+          "prescription",
+          "Total_Price",
+          "worker"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "datetime": {
+            "bsonType": "date"
+          },
+          "id_cliente": {
+            "bsonType": "objectId"
+          },
+          "id_glasses": {
+            "bsonType": "objectId"
+          },
+          "prescription": {
+            "bsonType": "object",
+            "properties": {
+              "left_eye": {
+                "bsonType": "double"
+              },
+              "right_eye": {
+                "bsonType": "double"
+              }
+            },
+            "required": [
+              "left_eye",
+              "right_eye"
+            ]
+          },
+          "Total_Price": {
+            "bsonType": "int"
+          },
+          "worker": {
+            "bsonType": "objectId"
+          }
+        }
+      }
+    },
+    "Glasses.supplier": {
+      "ns": "Glasses.supplier",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "address",
+          "fax",
+          "name",
+          "NIF",
+          "phone"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "address": {
+            "bsonType": "object",
+            "properties": {
+              "city": {
+                "bsonType": "string"
+              },
+              "country": {
+                "bsonType": "string"
+              },
+              "door": {
+                "bsonType": "string"
+              },
+              "floor": {
+                "bsonType": "int"
+              },
+              "number": {
+                "bsonType": "int"
+              },
+              "street": {
+                "bsonType": "string"
+              },
+              "zip-code": {
+                "bsonType": "string"
+              }
+            },
+            "required": [
+              "city",
+              "country",
+              "door",
+              "floor",
+              "number",
+              "street",
+              "zip-code"
+            ]
+          },
+          "fax": {
+            "bsonType": "string"
+          },
+          "name": {
+            "bsonType": "string"
+          },
+          "NIF": {
+            "bsonType": "string"
+          },
+          "phone": {
+            "bsonType": "string"
+          }
+        }
+      }
+    },
+    "Glasses.worker": {
+      "ns": "Glasses.worker",
+      "jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "name"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "name": {
+            "bsonType": "string"
+          }
+        }
+      }
+    }
+  },
+  "relationships": [
+    {
+      "id": "2a244aff-1223-480a-97ba-4b559f8d669d",
+      "relationship": [
+        {
+          "ns": "Glasses.orders",
+          "fields": [
+            "id_cliente"
+          ],
+          "cardinality": null
+        },
+        {
+          "ns": "Glasses.clients",
+          "fields": [
+            "_id"
+          ],
+          "cardinality": 1
+        }
+      ],
+      "isInferred": true
+    },
+    {
+      "id": "7c1c8c76-d5f1-426d-b04f-37fcf8ce6b37",
+      "relationship": [
+        {
+          "ns": "Glasses.orders",
+          "fields": [
+            "id_glasses"
+          ],
+          "cardinality": null
+        },
+        {
+          "ns": "Glasses.glasses",
+          "fields": [
+            "_id"
+          ],
+          "cardinality": 1
+        }
+      ],
+      "isInferred": true
+    },
+    {
+      "id": "780cdccd-9167-4ba1-8b48-2fabbb99d37f",
+      "relationship": [
+        {
+          "ns": "Glasses.glasses",
+          "fields": [
+            "supplier"
+          ],
+          "cardinality": null
+        },
+        {
+          "ns": "Glasses.supplier",
+          "fields": [
+            "_id"
+          ],
+          "cardinality": 1
+        }
+      ],
+      "isInferred": true
+    },
+    {
+      "id": "872378ae-422b-43a7-be54-a220c912941b",
+      "relationship": [
+        {
+          "ns": "Glasses.orders",
+          "fields": [
+            "worker"
+          ],
+          "cardinality": null
+        },
+        {
+          "ns": "Glasses.worker",
+          "fields": [
+            "_id"
+          ],
+          "cardinality": 1
+        }
+      ],
+      "isInferred": true
+    },
+    {
+      "id": "080f7b50-63af-4be6-8761-4a41cc36058c",
+      "relationship": [
+        {
+          "ns": "Glasses.clients",
+          "cardinality": null,
+          "fields": [
+            "referral"
+          ]
+        },
+        {
+          "ns": "Glasses.clients",
+          "cardinality": 1,
+          "fields": [
+            "_id"
+          ]
+        }
+      ],
+      "isInferred": false
+    }
+  ]
+}
